@@ -1,0 +1,8 @@
+<div>
+  <% if user_signed_in? %>
+    Signed in as <%= current_user.email %>. <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "text-blue-500" %>
+  <% else %>
+    <%= link_to "Sign in", new_user_session_path, class: "text-blue-500" %>
+  <% end %>
+</div>
+
