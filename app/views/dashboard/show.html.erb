@@ -1,8 +1,12 @@
-<div>
+<div class="flex justify-between">
   <% if user_signed_in? %>
-    Signed in as <%= current_user.email %>. <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "text-blue-500" %>
+    <div>
+      Signed in as <%= current_user.email %>. <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "text-blue-500" %>
+      <%= link_to "All messages", messages_path, class: "text-blue-500" %>
+    </div>
+    <%= turbo_stream_from current_user, :notifications %>
+    <%= turbo_frame_tag "notifications", src: notifications_path %>
   <% else %>
     <%= link_to "Sign in", new_user_session_path, class: "text-blue-500" %>
   <% end %>
 </div>
-
