@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The code in this repo is intended to accompany the tutorial originally published on [my blog](https://www.colby.so/posts/user-notifications-with-rails-noticed-and-hotwire). It demonstrates a basic implementation of real-time user notifications in a Ruby on Rails application, powered by Turbo Streams and [Noticed](https://github.com/excid3/noticed).
 
-Things you may want to cover:
+Begin in the `main` branch which contains a Rails 7 app with Turbo, Devise, and Tailwind installed, and then check the completed code in the `notifications` branch.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To run this application locally, clone the repo and then:
+```
+cd user-notices
+bin/setup
+```
